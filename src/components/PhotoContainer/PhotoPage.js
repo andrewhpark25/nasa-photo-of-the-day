@@ -3,12 +3,17 @@ import React, { useState, useEffect } from "react";
 import Photo from "./Photo";
 import axios from "axios";
 
+
+
 // import data 
+
+
 
 export default function PhotoPage() {
  
     const [photo, setPhoto] = useState([]);
-     
+ 
+
     useEffect(() => {
         axios
           .get(`https://api.nasa.gov/planetary/apod?api_key=wStCohnfDSQzxxRyuFUKhgSvrSa5iFfTQCxNN3Aj`)
@@ -21,15 +26,16 @@ export default function PhotoPage() {
           });
       }, []);
 
-
+       
   return (
-    <div className="photo-container-wrapper">
+    <div className="container">
       
      
            {
             <Photo title={photo.title} hdurl={photo.hdurl} copyright={photo.copyright} explanation={photo.explanation}/>
             
           }
+
     </div>
   );
 };
