@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import PhotoPage from "./components/PhotoContainer/PhotoPage";
+import NasaHeader from "./components/PhotoContainer/NasaHeader";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+     <NasaHeader />
+     <PhotoPage />
     </div>
   );
 }
